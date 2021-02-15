@@ -1,6 +1,11 @@
 # Sitecore Examples
 This project contains various small examples of Sitecore customizations.
 
+## Examples
+General repository.
+
+See <a href="Examples/Readme.md">Readme</a>
+
 ## Examples.EXM
 Customizations for Email Experience Manager.
 
