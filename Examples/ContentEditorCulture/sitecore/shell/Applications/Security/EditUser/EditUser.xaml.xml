@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <Sitecore.Shell.Applications.Security.EditUser Application="Security/Edit User" x:inherits="Examples.ContentEditorCulture.Shell.Applications.Security.EditUser.EditUserPage,Examples">
+
+    <Sitecore.Controls.DialogPage Header="Edit User" Icon="People/32x32/user1.png" Text="Edit the information about the user." runat="server">
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+      <Style runat="server" x:placeholder="Stylesheets">
+        .Language
+        {
+        width: 100%;
+        }
+
+        /*Chrome stretches the select's width as well as its containers's width to the longest option width*/
+        .wk .Language
+        {
+        width: 300px;
+        }
+
+        #Properties{
+        height:auto;
+        border: 1px solid #ccc;
+        }
+        #PropertiesFrame{
+        position:absolute;
+        }
+
+        .scButtonsContainer{
+        margin: 15px 0 0;
+        position: relative;
+        bottom: 0;
+        }
+
+        #PortraitImage {
+        display: block;
+        vertical-align: top;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        }
+
+      </Style>
+      <script>
+        function OnTabSelect() {
+        if (window.Flexie) Flexie.updateInstance();
+        }
+      </script>
+
+      <Tabstrip id="TabStrip" runat="server">
+        <Tab Header="General" runat="server">
+          <div style="overflow:hidden; padding:0 0 15px 0">
+            <ThemedImage ID="CurrentPortrait" Class="scImageCircle" Width="48" Height="48" runat="server" Align="middle" Float="left" Margin="0px 10px 0px 0px"/>
+            <div>
+              <Literal class="sc-text-largevalue" ID="UserName" runat="server"/>
+            </div>
+            <div>
+              <asp:Label ID="DomainName" runat="server"/>
+            </div>
+          </div>
+
+          <GridPanel Class="scFormTable" Columns="2" runat="server">
+
+            <Literal Text="Full Name:" runat="server" />
+            <asp:TextBox ID="FullName" runat="server" Width="100%" GridPanel.Width="100%"/>
+
+            <Literal Text="Comment:" runat="server" />
+            <asp:TextBox ID="Description" runat="server" Width="100%" GridPanel.Width="100%"/>
+
+            <Literal Text="E-mail:" runat="server" />
+            <asp:TextBox ID="Email" runat="server" Width="100%" GridPanel.Width="100%"/>
+
+            <Literal Text="Administrator:" GridPanel.Style="padding-top:6px;" runat="server" />
+            <Checkbox ID="IsAdministrator" runat="server" />
+
+            <Literal Text="Portrait:" runat="server" GridPanel.VAlign="top"/>
+
+            <GridPanel Columns="2" Width="100%" runat="server">
+
+              <Border GridPanel.ColSpan="2" Padding="0px 0px 10px 0px"  runat="server">
+                <asp:TextBox ID="Portrait" runat="server" Width="100%" ajax:Change="Portrait_Change"/>
+              </Border>
+
+              <ThemedImage ID="PortraitImage" class="scImageCircle" GridPanel.VAlign="top" Height="48" Width="48" runat="server"/>
+
+              <asp:DropDownList ID="Portraits" Width="100%" Size="10" GridPanel.VAlign="top" GridPanel.Width="100%" ajax:Change="Portraits_Change" runat="server"/>
+            </GridPanel>
+
+          </GridPanel>
+        </Tab>
+        <Tab Header="Member Of" runat="server">
+          <Literal class="scFieldLabel sc-text-bold" Text="Roles:" runat="server" />
+
+          <html:HtmlInputHidden ID="RolesValue" runat="server" />
+          <html:HtmlInputHidden ID="ManagedDomainsValue" runat="server" />
+
+          <html:HtmlSelect  ID="Roles" class="" Style="height: calc(100% - 75px)" runat="server" Size="8"/>
+          <div class="scButtonsContainer">
+            <asp:Button ID="Add" Text="Edit" ajax:Click="Add_Click" runat="server" />
+            <asp:Button ID="ManagedDomains" Text="Domains" ajax:Click="ManagedDomains_Click" runat="server" />
+          </div>
+        </Tab>
+        <Tab Header="Profile" runat="server">
+          <Border class="scStretch scFlexColumnContainer" runat="server">
+
+            <fieldset runat="server">
+              <legend>
+                <Literal Text="User Profile" runat="server" />
+              </legend>
+
+              <GridPanel class="scFormTable" Width="100%" Columns="2" runat="server">
+                <Literal Text="Start Url:" GridPanel.Style="padding-top: 2px;" runat="server" />
+
+                <div runat="server" GridPanel.Width="100%">
+                  <input id="StartDefault" runat="server" name="StartUrlSelector" type="radio" value="Default" />
+                  <label for="StartDefault">
+                    <Literal Text="Default" runat="server"/>
+                  </label>
+                  <br/>
+
+                  <input id="StartContentEditor" runat="server"  name="StartUrlSelector" type="radio" value="/sitecore/shell/applications/clientusesoswindows.aspx"/>
+                  <label for="StartContentEditor">
+                    <Literal Text="Content Editor" runat="server"/>
+                  </label>
+                  <br/>
+
+                  <input id="StartWebEdit" runat="server" name="StartUrlSelector" type="radio" value="/sitecore/shell/applications/webedit.aspx" />
+                  <label for="StartWebEdit">
+                    <Literal Text="Experience Editor"  runat="server"/>
+                  </label>
+                  <br/>
+
+                  <input id="StartPreview" runat="server" name="StartUrlSelector" type="radio" value="/sitecore/shell/applications/preview.aspx" />
+                  <label for="StartPreview">
+                    <Literal Text="Preview" runat="server"/>
+                  </label>
+                  <br/>
+
+                  <input id="StartDesktop" runat="server" name="StartUrlSelector" type="radio" value="/sitecore/shell/default.aspx" />
+                  <label for="StartDesktop">
+                    <Literal Text="Desktop" runat="server"/>
+                  </label>
+                  <br/>
+
+                  <input id="StartCustom" runat="server" name="StartUrlSelector" type="radio" value="Custom" />
+                  <label for="StartUrl">
+                    <Literal Text="URL:" runat="server"/>
+                  </label>
+                  <br/>
+                  <asp:TextBox ID="StartUrl" Width="500px" Style="margin:5px 0px 5px 20px"  runat="server"/>
+                </div>
+
+              </GridPanel>
+            </fieldset>
+
+            <Literal class="scFieldLabel sc-text-bold" Text="Additional Properties:" runat="server"/>
+
+            <Scrollbox class="scFlexContent scScrollbox" ID="Properties" runat="server" Padding="0px">
+              <Frame ID="PropertiesFrame" Width="100%" runat="server" />
+            </Scrollbox>
+
+            <Border class="scButtonsContainer" runat="server">
+              <asp:Button ID="EditProfile" Text="Edit" ajax:Click="EditProfile_Click" runat="server" />
+              <asp:Button ID="ChangeProfile" Text="Change" ajax:Click="OnChangeProfile_Click" runat="server" />
+            </Border>
+          </Border>
+        </Tab>
+        <Tab Header="Language Settings" runat="server">
+          <fieldset>
+            <legend>
+              <Literal Text="Sitecore Client" runat="server" />
+            </legend>
+
+            <GridPanel Class="scFormTable" Columns="2" runat="server">
+              <Literal Text="Client Language:" runat="server" />
+              <asp:DropDownList ID="ClientLanguage" CssClass="Language" GridPanel.Width="100%" runat="server"/>
+
+              <Literal Text="Regional ISO Code:" runat="server" />
+              <asp:DropDownList ID="RegionalISOCode" CssClass="Language" GridPanel.Width="100%" runat="server"/>
+
+              <Literal Text="Timezone:" runat="server" />
+              <asp:DropDownList ID="Timezone" CssClass="Language" GridPanel.Width="100%" runat="server"/>
+            </GridPanel>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <Literal Text="Content" runat="server" />
+            </legend>
+
+            <GridPanel Class="scFormTable" Columns="2" runat="server">
+              <Literal Text="Default Content Language:" runat="server" />
+              <asp:DropDownList ID="ContentLanguage" CssClass="Language" GridPanel.Width="100%" runat="server"/>
+            </GridPanel>
+          </fieldset>
+
+        </Tab>
+        <Tab Header="Information" runat="server">
+          <GridPanel class="scFormTable scNoneditableForm" Columns="2" CellPadding="4" runat="server">
+            <Literal Text="Last Login:" runat="server" />
+            <asp:Label ID="LastLoginDate" runat="server"/>
+
+            <Literal Text="Created:" runat="server" />
+            <asp:Label ID="CreationDate" runat="server"/>
+
+            <Literal Text="Last Activity:" runat="server" />
+            <asp:Label ID="LastActivityDate" runat="server"/>
+
+            <Literal Text="Last Password Changed:" runat="server" />
+            <asp:Label ID="LastPasswordChangedDate" runat="server"/>
+
+            <Literal Text="Last Lockout:" runat="server" />
+            <asp:Label ID="LastLockoutDate" runat="server"/>
+          </GridPanel>
+
+        </Tab>
+      </Tabstrip>
+
+    </Sitecore.Controls.DialogPage>
+  </Sitecore.Shell.Applications.Security.EditUser>
+
+</xamlControls>

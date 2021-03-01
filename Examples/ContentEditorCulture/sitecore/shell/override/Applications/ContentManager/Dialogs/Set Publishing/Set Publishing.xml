@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <SetPublishing>
+    <FormDialog Header="Publishing Settings" Text="Specify the publishing settings for the selected item.">
+
+      <CodeBeside Type="Examples.ContentEditorCulture.Shell.Applications.Content_Manager.Dialogs.Set_Publishing.SetPublishingForm,Examples"/>
+
+      <Stylesheet>
+        .scVersionNumber, .scPublishable {
+        text-align: center;
+        }
+      </Stylesheet>
+      <Border class="scMessageBar scWarning" ID="Warning" Visible="false" def:placeholder="Toolbar">
+        <Border class="scMessageBarIcon"></Border>
+        <Border class="scMessageBarTextContainer">
+          <Literal class="scMessageBarText" Text="You cannot change publish restrictions as you cannot modify the item." />
+        </Border>
+      </Border>
+
+      <Border Class="scFlexColumnContainer" Width="100%" Height="100%">
+        <Tabstrip Class="scFlexContent" ID="Tabs" Height="100%" Width="100%">
+          <Tab ID="VersionsTab" Header="Versions">
+
+            <Literal class="scFieldLabel" Text="Specify when you want each version of the selected item to be publishable. This applies to the current language only."/>
+            <Border ID="Versions" />
+
+          </Tab>
+
+          <Tab ID="ItemTab" Header="Item">
+
+            <Literal class="scFieldLabel" Text="Specify when you want to the selected item to be publishable. This applies to every item version in every language."/>
+
+            <Border class="scFieldLabel">
+              <Checkbox ID="NeverPublish" Header="Publishable" Click="SetNeverPublish"/>
+            </Border>
+
+            <Border ID="PublishPanel">
+
+              <GridPanel class="scFormTable" Width="100%" Columns="3" CellPadding="4">
+
+                <Border GridPanel.NoWrap="true">
+                  <Literal Text="Publishable from:"/>
+                </Border>
+
+                <DateTimePicker ID="Publish" Width="100%" GridPanel.Width="100%"/>
+
+                <Space Width="32"/>
+
+                <Border GridPanel.NoWrap="true">
+                  <Literal Text="Publishable to:"/>
+                </Border>
+
+                <DateTimePicker ID="Unpublish" Width="100%"/>
+
+              </GridPanel>
+
+            </Border>
+
+          </Tab>
+
+          <Tab ID="TargetsTab" Header="Targets">
+            <Literal class="scFieldLabel" Text="Select the publishing target that you want to publish the item to. This applies to every item version in every language."/>
+
+            <Groupbox ID="PublishingTargetsPanel" Header="Publishing targets">
+              <Border ID="PublishingTargets" Padding="4px" />
+            </Groupbox>
+
+          </Tab>
+        </Tabstrip>
+      </Border>
+
+    </FormDialog>
+  </SetPublishing>
+</control>
