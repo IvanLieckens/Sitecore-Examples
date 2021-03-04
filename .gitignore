@@ -338,3 +338,24 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Sitecore License
+License.xml
+
+# Certificates + Tooling
+*.pem
+mkcert.exe
+
+# Docker data & deploy locations
+docker/data/cm/logs/*
+!docker/data/cm/logs/.gitkeep
+docker/data/solr/**
+!docker/data/solr/.gitkeep
+docker/deploy/cm/**
+!docker/deploy/cm/.gitkeep
+
+# Sitecore Serialization
+.scindex
+.sitecore
+*.itempackage
+*.sicpackage

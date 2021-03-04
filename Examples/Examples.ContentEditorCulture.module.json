@@ -1,0 +1,21 @@
+{
+  "namespace": "Examples.ContentEditorCulture",
+  "items": {
+    "includes": [
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "core",
+        "name": "Simple Field Date",
+        "path": "/sitecore/system/Field types/Simple Types/Date",
+        "scope": "singleItem"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "core",
+        "name": "Simple Field Datetime",
+        "path": "/sitecore/system/Field types/Simple Types/Datetime",
+        "scope": "singleItem"
+      }
+    ]
+  }
+}

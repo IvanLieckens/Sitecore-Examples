@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Windows</DockerTargetOS>
+    <ProjectGuid>7ca18efe-b4fd-4be9-a86b-75d46c49cfc2</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>https://www.examples.sc</DockerServiceUrl>
+    <DockerServiceName>cm</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".dockerignore" />
+    <None Include=".env" />
+    <None Include=".env.user" />
+    <None Include="docker-compose.yml" />
+    <None Include="docker-compose.override.yml" />
+    <None Include="docker\build\cm\Dockerfile" />
+    <None Include="docker\data\cm\logs\.gitkeep" />
+    <None Include="docker\data\solr\.gitkeep" />
+    <None Include="docker\data\sql\.gitkeep" />
+    <None Include="docker\data\traefik\certs\.gitkeep" />
+    <None Include="docker\data\traefik\config\dynamic\certs_config.yaml" />
+    <None Include="docker\deploy\cm\.gitkeep" />
+    <None Include="Init.ps1" />
+    <None Include="Up.ps1" />
+  </ItemGroup>
+</Project>
