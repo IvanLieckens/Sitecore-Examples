@@ -36,18 +36,22 @@ namespace Examples.ContentEditorCulture.Shell.Applications.Security.EditUser
         {
             base.OK_Click();
             User user = GetUser();
-            UserProfile profile = user.Profile;
-
-            if (HasChanged(profile.GetCustomProperty(Constants.TimezoneUserProfileFieldKey), Timezone.SelectedValue))
+            if (user != null)
             {
-                profile.SetCustomProperty(Constants.TimezoneUserProfileFieldKey, Timezone.SelectedValue);
-                profile.Save();
+                UserProfile profile = user.Profile;
+
+                if (HasChanged(profile.GetCustomProperty(Constants.TimezoneUserProfileFieldKey), Timezone.SelectedValue))
+                {
+                    profile.SetCustomProperty(Constants.TimezoneUserProfileFieldKey, Timezone.SelectedValue);
+                    profile.Save();
+                }
             }
         }
 
         private static User GetUser()
         {
-            return User.FromName(WebUtil.GetQueryString("us", "sitecore\\audrey"), true);
+            string username = WebUtil.GetQueryString("us", null);
+            return string.IsNullOrWhiteSpace(username) ? null : User.FromName(username, true);
         }
 
         private static bool HasChanged(string profileValue, string controlValue)
