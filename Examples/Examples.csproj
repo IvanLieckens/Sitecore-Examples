@@ -90,13 +90,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContentEditorCulture\sitecore\shell\Applications\Security\EditUser\EditUser.xaml.xml" />
-    <Content Include="ContentEditorCulture\sitecore\shell\override\Applications\ContentManager\Dialogs\Set Publishing\Set Publishing.xml" />
-    <Content Include="ContentEditorCulture\sitecore\shell\override\Applications\ContentManager\Galleries\Versions\Gallery Versions.xml" />
+    <Content Include="sitecore\shell\Applications\Security\EditUser\EditUser.xaml.xml" />
+    <Content Include="sitecore\shell\override\Applications\ContentManager\Dialogs\Set Publishing\Set Publishing.xml" />
+    <Content Include="sitecore\shell\override\Applications\ContentManager\Galleries\Versions\Gallery Versions.xml" />
     <Content Include="Readme.md" />
     <Content Include="App_Config\Include\ArchiveVersionsAgent.config" />
     <Content Include="App_Config\Include\ContentEditorCulture.config" />
     <None Include="Examples.ContentEditorCulture.module.json" />
+    <None Include="Examples.wpp.targets" />
     <None Include="Properties\PublishProfiles\docker.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -106,10 +107,10 @@
     <Compile Include="ContentEditorCulture\Fields\Date.cs" />
     <Compile Include="ContentEditorCulture\Fields\DateTime.cs" />
     <Compile Include="ContentEditorCulture\Pipelines\RenderField\GetDateFieldValue.cs" />
-    <Compile Include="ContentEditorCulture\sitecore\shell\Applications\Security\EditUser\EditUserPage.cs" />
-    <Compile Include="ContentEditorCulture\sitecore\shell\Applications\WebEdit\Commands\EditDate.cs" />
-    <Compile Include="ContentEditorCulture\sitecore\shell\override\Applications\ContentManager\Dialogs\Set Publishing\SetPublishingForm.cs" />
-    <Compile Include="ContentEditorCulture\sitecore\shell\override\Applications\ContentManager\Galleries\Versions\GalleryVersionsForm.cs" />
+    <Compile Include="sitecore\shell\Applications\Security\EditUser\EditUserPage.cs" />
+    <Compile Include="sitecore\shell\Applications\WebEdit\Commands\EditDate.cs" />
+    <Compile Include="sitecore\shell\override\Applications\ContentManager\Dialogs\Set Publishing\SetPublishingForm.cs" />
+    <Compile Include="sitecore\shell\override\Applications\ContentManager\Galleries\Versions\GalleryVersionsForm.cs" />
     <Compile Include="ContentEditorCulture\Utils\TimeZoneUtil.cs" />
     <Compile Include="ContentEditorCulture\Xml\Xsl\DateRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,7 +150,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets'))" />
   </Target>
+  <Import Project="..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets" Condition="Exists('..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

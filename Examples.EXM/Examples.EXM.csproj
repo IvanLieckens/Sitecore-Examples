@@ -108,6 +108,8 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Examples.EXM.config" />
     <Content Include="Readme.md" />
+    <None Include="Examples.EXM.wpp.targets" />
+    <None Include="Properties\PublishProfiles\docker.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -153,7 +155,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets'))" />
   </Target>
+  <Import Project="..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets" Condition="Exists('..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
