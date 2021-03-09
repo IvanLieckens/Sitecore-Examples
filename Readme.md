@@ -11,14 +11,14 @@ Serialization of items is handled by the Sitecore CLI.
 ## Examples
 General repository.
 
-See <a href="Examples/Readme.md">Readme</a>
+See <a href="src/Examples/Readme.md">Readme</a>
 
 ## Examples.EXM
 Customizations for Email Experience Manager.
 
-See <a href="Examples.EXM/Readme.md">Readme</a>
+See <a href="src/Examples.EXM/Readme.md">Readme</a>
 
 ## Examples.XConnect.Copy
 Example of program to copy XConnect data. (:warning: This is built against 9.3)
 
-See <a href="Examples.XConnect.Copy/Readme.md">Readme</a>
+See <a href="src/Examples.XConnect.Copy/Readme.md">Readme</a>
