@@ -1,0 +1,23 @@
+﻿---
+ID: "684a95f2-edf6-4d67-9269-3594b969a7f6"
+Parent: "6fa4a0d2-b736-435a-beb0-b2cf5eb7404e"
+Template: "6fa4a0d2-b736-435a-beb0-b2cf5eb7404e"
+Path: /sitecore/templates/Project/Wildcard/Folders/Site Folder/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210305T172133Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "44044024-461b-472f-a3f4-fb5d12afeef7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210305T172133Z

@@ -1,0 +1,6 @@
+﻿@model Examples.Areas.Wildcard.Models.Shared.PagingViewModel
+    
+@for (int i = 0; i < Model.Pages; i++)
+{
+    <a href="?page=@(i+1)">@(i+1)</a>
+}

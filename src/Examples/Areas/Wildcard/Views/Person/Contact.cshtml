@@ -1,0 +1,14 @@
+﻿@using Examples.Wildcard
+@model Examples.Areas.Wildcard.Models.Person
+
+<h2>Person Contact</h2>
+<table>
+    <tr>
+        <td>Email:</td>
+        <td>@Html.Sitecore().Field(Templates.Person.Fields.PersonEmail.ToString(), Model.InnerItem)</td>
+    </tr>
+    <tr>
+        <td>Phone:</td>
+        <td>@Html.Sitecore().Field(Templates.Person.Fields.PersonPhone.ToString(), Model.InnerItem)</td>
+    </tr>
+</table>

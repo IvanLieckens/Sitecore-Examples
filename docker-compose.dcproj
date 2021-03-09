@@ -12,9 +12,13 @@
     <None Include=".dockerignore" />
     <None Include=".env" />
     <None Include=".env.user" />
+    <None Include="Build.ps1" />
     <None Include="docker-compose.yml" />
     <None Include="docker-compose.override.yml" />
+    <None Include="Dockerfile" />
     <None Include="docker\build\cm\Dockerfile" />
+    <None Include="docker\build\cm\transforms\Web.config" />
+    <None Include="docker\build\dotnetsdk\Dockerfile" />
     <None Include="docker\data\cm\logs\.gitkeep" />
     <None Include="docker\data\solr\.gitkeep" />
     <None Include="docker\data\sql\.gitkeep" />

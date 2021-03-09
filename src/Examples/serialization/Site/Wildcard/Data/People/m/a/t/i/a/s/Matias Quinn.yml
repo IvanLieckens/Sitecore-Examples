@@ -1,0 +1,33 @@
+﻿---
+ID: "7fdb934c-cc89-4362-9fde-8c59b4538e10"
+Parent: "f066aa7a-f352-4663-b580-bfac09705d50"
+Template: "d636c41b-ddd6-4cec-8f2b-a2e15a449b38"
+Path: /sitecore/content/Wildcard/Data/People/m/a/t/i/a/s/Matias Quinn
+SharedFields:
+- ID: "20b06dde-4204-4544-95be-a3f855a5f055"
+  Hint: PersonLastName
+  Value: Quinn
+- ID: "31cccffd-8d3f-4f02-b4b1-dc84d53f46a2"
+  Hint: PersonEmail
+  Value: MatiasQuinn@email.local
+- ID: "376f836c-a106-4c42-997a-372044f551ed"
+  Hint: PersonFirstName
+  Value: Matias
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210308T100827Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "46d21a88-2cc7-4eea-97aa-9dc34be9e75c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        extranet\Anonymous
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210309T113600Z

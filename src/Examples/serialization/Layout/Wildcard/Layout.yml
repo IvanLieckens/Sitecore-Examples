@@ -1,0 +1,30 @@
+﻿---
+ID: "9b2e4ca5-03b1-434b-a1b4-2ca48f38d4ee"
+Parent: "e977946f-fb8c-40fc-9850-d8e3413465a8"
+Template: "3a45a723-64ee-4919-9d41-02fd40fd1466"
+Path: /sitecore/layout/Layouts/Project/Wildcard/Layout
+SharedFields:
+- ID: "70dc08d9-cda2-4f04-aa35-c11fd7138066"
+  Hint: Area
+  Value: Wildcard
+- ID: "a036b2bc-ba04-44f6-a75f-bae6cd242abf"
+  Hint: Path
+  Value: Layout.cshtml
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210308T103737Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0edb3f87-1771-4575-880e-5dcab5859a4f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210308T154618Z

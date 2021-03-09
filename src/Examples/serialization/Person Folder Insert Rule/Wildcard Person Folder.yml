@@ -1,0 +1,64 @@
+﻿---
+ID: "efb5dd81-97db-4269-beee-25b4a205ad8f"
+Parent: "ff0bc016-2d01-4f55-a020-ef6fc2fe7559"
+Template: "664e5035-eb8c-4ba1-9731-a098fcc9127a"
+Path: /sitecore/system/Settings/Rules/Insert Options/Rules/Wildcard Person Folder
+SharedFields:
+- ID: "fa307b86-da2a-44bd-887d-e2057cdb4948"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{ABDBD3E7-615D-43BD-80A9-8C2B368C89C6}"
+        name="Person Folder Insert Rule">
+        <conditions>
+          <and
+            uid="011EC128D7BB4187B8FB068CC07033BB">
+            <condition
+              id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+              uid="711F509BF92443E9B82FB667EB491F0C"
+              templateid="{596BE748-1771-4249-9BC1-B47100B28EF0}" />
+            <condition
+              id="{A16C400B-2248-4B14-80BA-AE2CA302FB34}"
+              uid="7D855FE23E4D4BFC95AC3FED8220A4AC"
+              except="true"
+              templateid="{21DCF9CE-AAA7-44B0-A915-94F267D19BC8}" />
+          </and>
+        </conditions>
+        <actions>
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="416FE3F6B9C54E488A4006FC634ACE7A"
+            insertoptionid="{21DCF9CE-AAA7-44B0-A915-94F267D19BC8}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210305T182539Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bad4f19e-945b-4ec5-bad7-389761939ded"
+    - ID: "9e0287d9-af90-41ad-8d36-332375e194d6"
+      Hint: Name
+      Value: Wildcard Person Folder
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210305T182724Z

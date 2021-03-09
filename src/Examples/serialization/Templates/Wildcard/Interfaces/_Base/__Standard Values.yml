@@ -1,0 +1,31 @@
+﻿---
+ID: "45989e7f-41a5-4b95-a49d-7c63c3700e97"
+Parent: "cb866936-e6dc-4cc3-9426-11ea2368076c"
+Template: "cb866936-e6dc-4cc3-9426-11ea2368076c"
+Path: /sitecore/templates/Project/Wildcard/Interfaces/_Base/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210305T103532Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6e85603-ca85-4ff6-a628-9b65bfa72d1f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210305T103532Z

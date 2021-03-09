@@ -1,0 +1,49 @@
+﻿---
+ID: "5202d1bf-6eb9-449b-915b-0720916d22e7"
+Parent: "7c7c917d-eabc-434c-8c15-4da1e5330a2b"
+Template: "7c7c917d-eabc-434c-8c15-4da1e5330a2b"
+Path: /sitecore/templates/Project/Wildcard/Page Types/Person Page/__Standard Values
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{9B2E4CA5-03B1-434B-A1B4-2CA48F38D4EE}">
+        <r
+          id="{9CBD0F0D-29F6-48CF-ADF5-867B3EBA9203}"
+          ph="header"
+          uid="{A54E470F-189A-4964-B054-F284D14C4336}" />
+        <r
+          id="{CED44D1E-1AC3-44E3-9165-69AFA8BDB6CA}"
+          ph="footer"
+          uid="{3AA0DD1A-C148-422E-8776-621F4336FE4A}" />
+        <r
+          id="{AE723A87-75CD-4C57-A409-4BB6434EA16B}"
+          ph="main"
+          uid="{5BE30395-C07D-4374-8774-A2713674FE8D}" />
+        <r
+          id="{A625D4A3-C31B-4E8C-8390-B57AAF6A76BA}"
+          ph="main"
+          uid="{164FF9B5-FCC5-4DD8-9420-179E2487AD14}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210305T172716Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e6457877-cbb3-4e8a-aaa1-1a9a242cf17b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210308T181723Z

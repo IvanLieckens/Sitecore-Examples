@@ -1,0 +1,63 @@
+{
+  "namespace": "Examples.Wildcard",
+  "items": {
+    "includes": [
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Templates",
+        "path": "/sitecore/templates/Project/Wildcard",
+        "scope": "itemAndDescendants"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Item Hierarchy Child Template Rule",
+        "path": "/sitecore/system/Settings/Rules/Definitions/Elements/Item Hierarchy/Child Template",
+        "scope": "singleItem"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Home Page Insert Rule",
+        "path": "/sitecore/system/Settings/Rules/Insert Options/Rules/Wildcard Home Page",
+        "scope": "singleItem"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Person Folder Insert Rule",
+        "path": "/sitecore/system/Settings/Rules/Insert Options/Rules/Wildcard Person Folder",
+        "scope": "singleItem"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Data Folder Insert Rule",
+        "path": "/sitecore/system/Settings/Rules/Insert Options/Rules/Wildcard Data Folder",
+        "scope": "singleItem"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Layout",
+        "path": "/sitecore/layout/Layouts/Project/Wildcard",
+        "scope": "itemAndDescendants"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Renderings",
+        "path": "/sitecore/layout/Renderings/Project/Wildcard",
+        "scope": "itemAndDescendants"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Site",
+        "path": "/sitecore/content/Wildcard",
+        "scope": "itemAndDescendants"
+      }
+    ]
+  }
+}

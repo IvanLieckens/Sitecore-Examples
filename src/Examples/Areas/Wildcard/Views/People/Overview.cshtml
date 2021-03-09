@@ -1,0 +1,13 @@
+﻿@using Examples.Areas.Wildcard.Models
+@using Examples.Areas.Wildcard.Models.People
+@model PeopleOverviewViewModel
+
+<div class="component wildcard-people-overview">
+    @foreach (Person p in Model.Persons)
+    {
+        <div class="person">
+            <a href="@p.GetUrl(Model.WildcardItem)">@p.Name</a>
+        </div>
+    }
+    @Html.Partial("_Paging", Model.Paging)
+</div>

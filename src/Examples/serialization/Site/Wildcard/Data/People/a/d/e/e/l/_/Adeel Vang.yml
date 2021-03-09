@@ -1,0 +1,33 @@
+﻿---
+ID: "319c2314-cb0e-4935-ac69-70de491de377"
+Parent: "ffc2cab2-2f12-48e6-b77a-604952fb14c3"
+Template: "d636c41b-ddd6-4cec-8f2b-a2e15a449b38"
+Path: /sitecore/content/Wildcard/Data/People/a/d/e/e/l/_/Adeel Vang
+SharedFields:
+- ID: "20b06dde-4204-4544-95be-a3f855a5f055"
+  Hint: PersonLastName
+  Value: Vang
+- ID: "31cccffd-8d3f-4f02-b4b1-dc84d53f46a2"
+  Hint: PersonEmail
+  Value: AdeelVang@email.local
+- ID: "376f836c-a106-4c42-997a-372044f551ed"
+  Hint: PersonFirstName
+  Value: Adeel
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210308T100817Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "52c817c4-b242-4f92-89f1-b66b544d2dfd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        extranet\Anonymous
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210309T113558Z

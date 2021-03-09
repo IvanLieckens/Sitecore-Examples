@@ -14,4 +14,4 @@ packages
 .gitignore
 *Dockerfile
 docker-compose*
-**/*.md
+!docker-compose.dcproj

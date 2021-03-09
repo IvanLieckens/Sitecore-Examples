@@ -1,6 +1,28 @@
 version: "2.4"
 services:
 
+  # A servercore image with both the netcore and netframework SDKs.
+  # See Dockerfile for more details.
+  dotnetsdk:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
+    build:
+      context: ./docker/build/dotnetsdk
+    scale: 0
+
+  # The solution build image is added here so it can be referenced as a build dependency
+  # for the images which use its output. Setting "scale: 0" means docker-compose will not
+  # include it in the running environment. See Dockerfile for more details.
+  solution:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+    build:
+      context: .
+      args:
+        BUILD_CONFIGURATION: Debug
+        BUILD_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
+    depends_on:
+      - dotnetsdk
+    scale: 0
+
   traefik:
     volumes:
       - .\docker\data\traefik:C:/etc/traefik
@@ -29,14 +51,20 @@ services:
       context: ./docker/build/cm
       args:
         PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-cm:${SITECORE_VERSION}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
         TOOLS_IMAGE: ${TOOLS_IMAGE}
         MANAGEMENT_SERVICES_IMAGE: ${MANAGEMENT_SERVICES_IMAGE}
+    depends_on:
+      - solution
+    ports:
+      - "81:80"
     volumes:
       - ${SITECORE_LICENSE_FOLDER}:c:\license
       - .\docker\data\cm\logs:c:\inetpub\wwwroot\App_Data\logs
       - .\docker\deploy\cm:c:\deploy
     environment:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
+      Sitecore.Sites.Wildcard.TargetHostName: ${CM_HOST}
     entrypoint: powershell.exe -Command "& C:\tools\entrypoints\iis\Development.ps1"
 
   xconnect:

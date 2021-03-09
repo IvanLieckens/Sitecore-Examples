@@ -1,0 +1,23 @@
+﻿---
+ID: "74f46c50-085b-4472-a9c8-a150c3fe33c5"
+Parent: "0e2ef1ad-3bf6-4d3e-9168-fb1fc697a1f7"
+Template: "596be748-1771-4249-9bc1-b47100b28ef0"
+Path: /sitecore/content/Wildcard/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210305T175735Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f26ce26-fab8-40c9-b9dd-6c9a1842ae3d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210305T175735Z
