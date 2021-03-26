@@ -48,6 +48,7 @@ if (-not $status.status -eq "enabled") {
 }
 
 if (-not $NoPush) {
+    dotnet sitecore plugin add -n Sitecore.DevEx.Extensibility.Serialization
     dotnet sitecore login --cm "https://$CMHost/" --auth "https://$IDHost/" --allow-write true
     if ($LASTEXITCODE -ne 0) {
         Write-Error "Unable to log into Sitecore, did the Sitecore environment start correctly? See logs above."

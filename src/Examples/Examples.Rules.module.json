@@ -1,0 +1,14 @@
+{
+  "namespace": "Examples.Rules",
+  "items": {
+    "includes": [
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Request Rules",
+        "path": "/sitecore/system/Settings/Rules/Definitions/Elements/Request",
+        "scope": "itemAndDescendants"
+      }
+    ]
+  }
+}

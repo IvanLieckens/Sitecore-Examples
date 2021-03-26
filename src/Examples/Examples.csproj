@@ -160,6 +160,8 @@
     <Compile Include="ContentEditorCulture\Fields\Date.cs" />
     <Compile Include="ContentEditorCulture\Fields\DateTime.cs" />
     <Compile Include="ContentEditorCulture\Pipelines\RenderField\GetDateFieldValue.cs" />
+    <Compile Include="Rules\Request\QuerystringCondition.cs" />
+    <Compile Include="Rules\Request\UriSegmentCondition.cs" />
     <Compile Include="sitecore\shell\Applications\Security\EditUser\EditUserPage.cs" />
     <Compile Include="sitecore\shell\Applications\WebEdit\Commands\EditDate.cs" />
     <Compile Include="sitecore\shell\override\Applications\ContentManager\Dialogs\Set Publishing\SetPublishingForm.cs" />
