@@ -1,6 +1,6 @@
 # Sitecore Examples
 This project contains various small examples of Sitecore customizations.
-The current version is built against Sitecore 10.1 and leverages docker images to provide a quick start local environment.
+The current version is built against Sitecore 10.2 and leverages docker images to provide a quick start local environment.
 Serialization of items is handled by the Sitecore CLI.
 
 ## Getting Started
@@ -19,6 +19,6 @@ Customizations for Email Experience Manager.
 See <a href="src/Examples.EXM/Readme.md">Readme</a>
 
 ## Examples.XConnect.Copy
-Example of program to copy XConnect data. (:warning: This is built against 9.3)
+Example of program to copy XConnect data.
 
 See <a href="src/Examples.XConnect.Copy/Readme.md">Readme</a>
