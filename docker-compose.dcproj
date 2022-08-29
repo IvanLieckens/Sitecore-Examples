@@ -19,6 +19,7 @@
     <None Include="docker\build\cm\Dockerfile" />
     <None Include="docker\build\cm\transforms\Web.config" />
     <None Include="docker\build\dotnetsdk\Dockerfile" />
+    <None Include="docker\build\dotnetsdk\nuget.exe" />
     <None Include="docker\data\cm\logs\.gitkeep" />
     <None Include="docker\data\solr\.gitkeep" />
     <None Include="docker\data\sql\.gitkeep" />

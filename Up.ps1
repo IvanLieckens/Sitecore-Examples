@@ -13,7 +13,10 @@ Param (
     [string]$EnvFilePath = ".\.env.user",
 
     [Parameter(HelpMessage = "Determines whether there will be a dotnet sitecore ser push + publish or not.")]
-    [Switch]$NoPush
+    [Switch]$SkipPush,
+
+    [Parameter(HelpMessage = "Determines whether there will be docker-compose build or not.")]
+    [Switch]$SkipBuild
 )
 
 $ErrorActionPreference = "Stop";
@@ -23,6 +26,11 @@ $IDHost = "{0}.{1}" -f $IDName, $EnvironmentDomain
 # Double check whether init has been run
 if (-not (Test-Path $EnvFilePath -PathType Leaf)) {
     throw "There is no '$EnvFilePath' file. Did you run 'Init.ps1'?"
+}
+
+# Build the containers
+if (-not $SkipBuild) {
+    docker-compose --env-file $EnvFilePath build
 }
 
 # Start the Sitecore instance
@@ -47,8 +55,7 @@ if (-not $status.status -eq "enabled") {
     Write-Error "Timeout waiting for Sitecore CM to become available via Traefik proxy. Check CM container logs."
 }
 
-if (-not $NoPush) {
-    dotnet sitecore plugin add -n Sitecore.DevEx.Extensibility.Serialization
+if (-not $SkipPush) {
     dotnet sitecore login --cm "https://$CMHost/" --auth "https://$IDHost/" --allow-write true
     if ($LASTEXITCODE -ne 0) {
         Write-Error "Unable to log into Sitecore, did the Sitecore environment start correctly? See logs above."

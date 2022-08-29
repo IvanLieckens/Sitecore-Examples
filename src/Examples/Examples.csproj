@@ -49,29 +49,29 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Buckets, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Buckets.10.1.0\lib\net48\Sitecore.Buckets.dll</HintPath>
+    <Reference Include="Sitecore.Buckets">
+      <HintPath>..\..\packages\Sitecore.Buckets.10.2.0\lib\net48\Sitecore.Buckets.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Client, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Client.10.1.0\lib\net48\Sitecore.Client.dll</HintPath>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\..\packages\Sitecore.Client.10.2.0\lib\net48\Sitecore.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.ContentSearch.10.1.0\lib\net48\Sitecore.ContentSearch.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>..\..\packages\Sitecore.ContentSearch.10.2.0\lib\net48\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.ContentSearch.Linq.10.1.0\lib\net48\Sitecore.ContentSearch.Linq.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Linq">
+      <HintPath>..\..\packages\Sitecore.ContentSearch.Linq.10.2.0\lib\net48\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.ExperienceEditor.10.1.0\lib\net48\Sitecore.ExperienceEditor.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceEditor">
+      <HintPath>..\..\packages\Sitecore.ExperienceEditor.10.2.0\lib\net48\Sitecore.ExperienceEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Kernel.10.1.0\lib\net48\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\packages\Sitecore.Kernel.10.2.0\lib\net48\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Mvc.10.1.0\lib\net48\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\..\packages\Sitecore.Mvc.10.2.0\lib\net48\Sitecore.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc.Analytics, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Mvc.Analytics.10.1.0\lib\net48\Sitecore.Mvc.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Mvc.Analytics">
+      <HintPath>..\..\packages\Sitecore.Mvc.Analytics.10.2.0\lib\net48\Sitecore.Mvc.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="sysglobl" />
     <Reference Include="System.Data.Linq" />
@@ -210,9 +210,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets" Condition="Exists('..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" />
+  <Import Project="..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets" Condition="Exists('..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

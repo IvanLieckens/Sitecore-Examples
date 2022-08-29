@@ -3,6 +3,9 @@
   "modules": [
     "src/*/*.module.json"
   ],
+  "plugins": [
+    "Sitecore.DevEx.Extensibility.Serialization@5.0.16"
+  ],
   "serialization": {
     "defaultMaxRelativeItemPathLength": 100,
     "defaultModuleRelativeSerializationPath": "serialization"

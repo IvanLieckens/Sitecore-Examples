@@ -49,26 +49,26 @@
       <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Sitecore.EDS.Core, Version=11.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.EDS.Core.10.1.0\lib\net48\Sitecore.EDS.Core.dll</HintPath>
+    <Reference Include="Sitecore.EDS.Core">
+      <HintPath>..\..\packages\Sitecore.EDS.Core.10.2.0\lib\net48\Sitecore.EDS.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign, Version=11.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.EmailCampaign.10.1.0\lib\net48\Sitecore.EmailCampaign.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign">
+      <HintPath>..\..\packages\Sitecore.EmailCampaign.10.2.0\lib\net48\Sitecore.EmailCampaign.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign.Cm, Version=11.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.EmailCampaign.Cm.10.1.0\lib\net48\Sitecore.EmailCampaign.Cm.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign.Cm">
+      <HintPath>..\..\packages\Sitecore.EmailCampaign.Cm.10.2.0\lib\net48\Sitecore.EmailCampaign.Cm.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign.Model, Version=11.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.EmailCampaign.Model.10.1.0\lib\net48\Sitecore.EmailCampaign.Model.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign.Model">
+      <HintPath>..\..\packages\Sitecore.EmailCampaign.Model.10.2.0\lib\net48\Sitecore.EmailCampaign.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Kernel.10.1.0\lib\net48\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\packages\Sitecore.Kernel.10.2.0\lib\net48\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.Mvc.10.1.0\lib\net48\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\..\packages\Sitecore.Mvc.10.2.0\lib\net48\Sitecore.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XConnect.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Sitecore.XConnect.Core.10.1.0\lib\netstandard2.0\Sitecore.XConnect.Core.dll</HintPath>
+    <Reference Include="Sitecore.XConnect.Core">
+      <HintPath>..\..\packages\Sitecore.XConnect.Core.10.2.0\lib\netstandard2.0\Sitecore.XConnect.Core.dll</HintPath>
     </Reference>
     <Reference Include="sysglobl" />
     <Reference Include="System.Design" />
@@ -155,9 +155,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets" Condition="Exists('..\..\packages\Sitecore.Assemblies.Platform.10.1.0\build\Sitecore.Assemblies.Platform.targets')" />
+  <Import Project="..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets" Condition="Exists('..\..\packages\Sitecore.Assemblies.Platform.10.2.0\build\Sitecore.Assemblies.Platform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
