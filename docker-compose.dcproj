@@ -26,6 +26,7 @@
     <None Include="docker\data\traefik\certs\.gitkeep" />
     <None Include="docker\data\traefik\config\dynamic\certs_config.yaml" />
     <None Include="docker\deploy\cm\.gitkeep" />
+    <None Include="Down.ps1" />
     <None Include="Init.ps1" />
     <None Include="Up.ps1" />
   </ItemGroup>

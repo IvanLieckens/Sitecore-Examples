@@ -12,11 +12,11 @@ Param (
     [Parameter(HelpMessage = "Path to the .env file to use. '.\.env.user' is used by default.")]
     [string]$EnvFilePath = ".\.env.user",
 
-    [Parameter(HelpMessage = "Determines whether there will be a dotnet sitecore ser push + publish or not.")]
-    [Switch]$SkipPush,
-
     [Parameter(HelpMessage = "Determines whether there will be docker-compose build or not.")]
-    [Switch]$SkipBuild
+    [Switch]$SkipBuild,
+
+    [Parameter(HelpMessage = "Determines whether there will be a dotnet sitecore ser push + publish or not.")]
+    [Switch]$SkipPush
 )
 
 $ErrorActionPreference = "Stop";
